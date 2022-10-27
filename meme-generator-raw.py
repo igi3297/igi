@@ -119,6 +119,7 @@ if __name__ == '__main__':
         currentName = str(row[0])+"."+row[1]+"."+row[2]+"."+row[3].replace(",", " ").replace(".", " ")
         currentTextTop = row[1]+", "+row[2]
         currentTextBottom = row[3]
+        currentName = currentName.replace(" ", "_")
         print(currentName)
         generate_meme(image_path=imagePath, font_path=fontPath, name=currentName, top_text=currentTextTop, bottom_text=currentTextBottom)
         
