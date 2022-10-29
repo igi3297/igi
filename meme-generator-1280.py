@@ -102,13 +102,13 @@ class DB:
         :return:
         """
         cur = self.__conn.cursor()
-        cur.execute("SELECT * FROM meme WHERE is_created=0")
+        cur.execute("SELECT * FROM meme_catLook WHERE is_created=0")
         rows = cur.fetchall()
         return rows
 
 if __name__ == '__main__':
     scriptDir = os.path.dirname(os.path.realpath(__file__))
-    databasePath = scriptDir  + '/' + 'meme.catLook.db'
+    databasePath = scriptDir  + '/' + 'meme.ukraine.db'
     imagePath = scriptDir  + '/' + 'template.meme.catLook.1280x720.0.png'
     fontPath = scriptDir  + '/' + 'times-new-roman-cyr-bold.ttf'
     
